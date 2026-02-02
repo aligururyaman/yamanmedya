@@ -57,21 +57,19 @@ export default function Hero() {
         </div>
         <div className="relative">
           <div className="relative overflow-hidden rounded-3xl border border-border bg-black">
-            <div className="flex aspect-video items-center justify-center bg-zinc-950">
-              <div className="flex flex-col items-center gap-3 text-muted">
-                <Play className="h-10 w-10 text-accent" />
-                <p className="text-xs uppercase tracking-[0.2em]">
-                  Showreel hissi
-                </p>
+            <div className="relative aspect-video bg-zinc-950">
+              <video
+                className="h-full w-full object-cover"
+                src="/main.mp4"
+                autoPlay
+                muted
+                loop
+                playsInline
+              />
+              <div className="absolute inset-0 flex items-center justify-center">
+                <Play className="h-10 w-10 text-white/60" />
               </div>
             </div>
-            <button
-              type="button"
-              className="absolute bottom-4 right-4 rounded-full border border-border bg-black/70 px-4 py-2 text-xs uppercase tracking-[0.2em] text-foreground backdrop-blur"
-              onClick={() => setOpen(true)}
-            >
-              Oynat
-            </button>
           </div>
         </div>
       </div>
